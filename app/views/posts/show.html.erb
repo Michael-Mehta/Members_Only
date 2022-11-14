@@ -1,0 +1,13 @@
+<div>
+<div>
+<% if user_signed_in? %>
+
+<h1><%= @post.title %> - by <%= @post.user.username%></h1>
+<% else %>
+<h1> <%= @post.title %> </h1>
+<% end %>
+</div>
+<div>
+<p> <%= @post.description %> </p>
+</div>
+</div>

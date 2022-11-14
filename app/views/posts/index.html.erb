@@ -1,0 +1,21 @@
+<% if user_signed_in? %>  
+  <h2>Make a post!</h2>
+<% else %>
+  <h2>Sign in to make a post</h2>
+<% end %>
+<div class='post-container'>
+    <% @posts.each do |p|%>
+      <div class='big-tile'>
+        <div class='tile'>
+          <% if user_signed_in? %>
+            <strong>@<%= p.user.username %> - </strong>
+          <% end %>
+          <strong><%= p.title %></strong>
+          <p><em><%= p.description %></em></p>
+        </div>
+        <div class='show'>
+            <%= link_to 'View Post', p%>
+        </div>
+      </div>
+    <% end %>
+  </div>
