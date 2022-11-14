@@ -4,6 +4,11 @@
   <h2>Sign in to make a post</h2>
 <% end %>
 <div class='post-container'>
+<div class = 'new'>
+<% if user_signed_in? %>
+<%= link_to 'Create a Post', new_path %>
+<% end %>
+</div>
     <% @posts.each do |p|%>
       <div class='big-tile'>
         <div class='tile'>
