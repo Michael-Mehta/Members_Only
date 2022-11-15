@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
+  root "posts#index"
 
 
 resources :posts, only: [:new, :create, :index]
 
-root "posts#index"
+get "/posts/new.html.erb", to: "posts#create", as: "create"
 get "/posts/new.html.erb", to: "posts#new", as: "new"
 end
