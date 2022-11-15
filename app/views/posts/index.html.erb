@@ -6,7 +6,7 @@
 <div class='post-container'>
 <div class = 'new'>
 <% if user_signed_in? %>
-<%= link_to 'Create a Post', new_path %>
+<%= link_to 'Create a Post', new_post_path %>
 <% end %>
 </div>
     <% @posts.each do |p|%>
